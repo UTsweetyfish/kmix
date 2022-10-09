@@ -1,0 +1,6 @@
+# private library
+kmix: no-symbols-control-file
+# private library
+kmix: package-name-doesnt-match-sonames libkmixcore5
+# kmix has no command line arguments
+kmix: no-manual-page usr/bin/kmix

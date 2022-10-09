@@ -1,0 +1,713 @@
+kmix (4:21.08.3-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.3).
+
+ -- Norbert Preining <norbert@preining.info>  Fri, 05 Nov 2021 09:50:33 +0900
+
+kmix (4:21.08.1-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.1).
+  * Bump Standards-Version to 4.6.0, no change required.
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 08 Sep 2021 12:42:18 +0900
+
+kmix (4:21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 16:18:45 +0900
+
+kmix (4:21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Borrow minimal upstream signing key from k3b.
+  * Drop Kubuntu from maintainer name.
+  * Added myself to the uploaders.
+
+ -- Norbert Preining <norbert@preining.info>  Tue, 27 Apr 2021 14:45:17 +0900
+
+kmix (4:20.12.0-1) unstable; urgency=medium
+
+  * New upstream release (20.12.0).
+  * Drop patch upstream_Mixer-Delay-the-deletion-of-the-backend.patch applied
+    upstream.
+  * Refresh copyright information.
+  * Bump Standards-Version to 4.5.1, no change required.
+  * Refresh upstream metadata.
+  * Removed Maximiliano Curia from the uploaders, thanks for your work
+    on the package!
+  * Added myself to the uploaders.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 04 Jan 2021 11:21:41 +0100
+
+kmix (4:20.08.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (20.08.2).
+  * Refresh copyright information.
+  * Build with hardening=+all build hardening flag.
+  * Borrow minimal upstream signing key from k3b.
+  * Refresh upstream metadata.
+  * Add lintian override for kmix not having a manual, as it doesn’t have any
+    command line argument.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 30 Oct 2020 00:19:25 +0100
+
+kmix (4:20.08.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Backport upstream commit b3fe63796dfaa0b667c21160a9c10615d6690411 to fix
+    a crash at exit; patch
+    upstream_Mixer-Delay-the-deletion-of-the-backend.patch. (Closes: #969456)
+
+ -- Pino Toscano <pino@debian.org>  Fri, 04 Sep 2020 10:13:48 +0200
+
+kmix (4:20.08.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper-compat build dependency to 13
+  * Update the build dependencies according to the upstream build system:
+    - remove libglib2.0-dev, no more needed directly
+
+ -- Pino Toscano <pino@debian.org>  Fri, 14 Aug 2020 16:01:42 +0200
+
+kmix (4:20.04.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watch file to the new release-service location.
+  * Update the build dependencies according to the upstream build system:
+    - bump cmake to 3.5
+    - bump Qt packages to 5.11.0
+    - bump KF packages to 5.48.0
+    - remove libkf5iconthemes-dev, no more needed
+  * Switch from dhmk to the dh sequencer:
+    - invoke the dh sequencer using the kf5 addon
+    - manually force the generation of the substvars for the kde-l10n breaks
+  * Bump the debhelper compatibility to 12:
+    - switch the debhelper build dependency to debhelper-compat 12
+    - remove debian/compat
+  * Add Rules-Requires-Root: no.
+  * Bump Standards-Version to 4.5.0, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 02 Aug 2020 13:32:25 +0200
+
+kmix (4:19.08.2-1) unstable; urgency=medium
+
+  [ Sandro Knauß ]
+  * use signature for upstream tarball.
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Bump Standards-Version to 4.4.1, no changes required.
+  * Add the configuration for the CI on salsa.
+  * Update the build dependencies according to the upstream build system:
+    - bump the Qt packages to 5.7.0
+    - bump the KF packages to 5.41.0
+    - remove kinit-dev
+    - explicitly add gettext, and pkg-config
+  * Update the patches:
+    - kmix_showeverywhere.diff: refresh
+  * Update lintian overrides.
+  * Drop the old kdemultimedia-dev breaks/replaces, older than oldstable.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 12 Oct 2019 10:06:47 +0200
+
+kmix (4:18.04.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * New upstream release (18.04.1).
+  * Update Vcs links to salsa.
+  * Bump Standards-Version to 4.1.4 (No changes needed).
+  * Bump debhelper build-dep and compat to 11.
+  * Update copyright file for new upstream.
+
+ -- Sandro Knauß <hefee@debian.org>  Wed, 23 May 2018 01:11:39 +0200
+
+kmix (4:17.12.2-1) unstable; urgency=medium
+
+  * New upstream release:
+    - switches to Qt5/KF5 (Closes: #874975)
+  * Update the build dependencies following the port to Frameworks:
+    - remove kde-sc-dev-latest, and kdelibs5-dev
+    - add extra-cmake-modules, qtbase5-dev, libkf5completion-dev,
+      libkf5config-dev, libkf5configwidgets-dev, libkf5crash-dev,
+      libkf5dbusaddons-dev, libkf5doctools-dev, libkf5globalaccel-dev,
+      libkf5i18n-dev, libkf5iconthemes-dev, kinit-dev, libkf5notifications-dev,
+      libkf5plasma-dev, libkf5solid-dev, libkf5widgetsaddons-dev,
+      libkf5windowsystem-dev, and libkf5xmlgui-dev
+  * Use the right makefile class:
+    - use debian-qt-kde.mk v3
+    - bump the pkg-kde-tools build dependency to >= 0.15.16
+  * Stop passing -DKMIX_KF5_BUILD=0 to cmake, as kmix is now only Qt5/KF5.
+  * Break/replace against kde-l10n that ships translations.
+  * Update the patches:
+    - kmix_showeverywhere.diff: refresh
+  * Remove symlinking of the desktop autostart, since they are now installed
+    in the correct location.
+  * Use https for Format in copyright.
+  * Update lintian overrides.
+
+ -- Pino Toscano <pino@debian.org>  Tue, 20 Feb 2018 21:22:11 +0100
+
+kmix (4:17.08.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 4.1.3, no changes required.
+  * Simplify watch file, and switch it to https.
+  * Remove trailing whitespaces in changelog.
+  * Since it is still built as kdelibs 4.x, remove unused build dependencies:
+    extra-cmake-modules, libkf5dbusaddons-dev, libkf5globalaccel-dev,
+    libkf5i18n-dev, libkf5kdelibs4support-dev, libkf5xmlgui-dev, and
+    plasma-framework-dev.
+  * Because of the above, use version 2 of class debian-qt-kde.mk.
+  * Remove workaround for mips* architectures, as it should be not needed
+    anymore (hopefully)
+    - remove patch mips-no-as-needed-workaround.diff
+  * Remove patch kubuntu_cmake-policy.diff, as its job is already done
+    upstream.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 11 Jan 2018 09:26:41 +0100
+
+kmix (4:16.08.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Refresh patches
+
+  [ Maximiliano Curia ]
+  * New upstream release (16.08.0)
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 18 Oct 2016 23:58:09 +0200
+
+kmix (4:16.04.1-2) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+  [ Jurica Stanojkovic ]
+  * Fix assertion fail error on mips.
+    Thanks to Chris Lamb for the report and Jurica Stanojkovic for the patch
+    (Closes: 799992)
+
+  [ Maximiliano Curia ]
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 05 Jun 2016 17:06:51 +0200
+
+kmix (4:16.04.1-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+  * Update build-deps and deps with the info from cmake
+  * Refresh patches
+
+  [ Maximiliano Curia ]
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+  * Revert "Update build-deps and deps with the info from cmake"
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 21 May 2016 20:05:08 +0200
+
+kmix (4:15.12.0-1) experimental; urgency=medium
+
+  * New upstream release (15.12.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Feb 2016 10:23:49 +0100
+
+kmix (4:15.08.2-0ubuntu1) wily; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 14 Oct 2015 12:34:59 +0100
+
+kmix (4:15.08.1-1) unstable; urgency=medium
+
+  * New upstream release (15.08.1).
+  * Drop upstream patch: upstream_fix-kmixui.rc-install-location.diff
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 19 Sep 2015 19:10:51 +0200
+
+kmix (4:15.08.1-0ubuntu1) wily; urgency=medium
+
+  * New upstream release (15.08.1)
+  * Removed upstream_fix-kmixui.rc-install-location.diff as applied upstream
+
+ -- Clive Johnston <clivejo@aol.com>  Tue, 22 Sep 2015 17:09:32 +0100
+
+kmix (4:15.08.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (15.08.0).
+  * Add upstream_fix-kmixui.rc-install-location.diff (from Ubuntu).
+
+ -- Jeremy Lainé <jeremy.laine@m4x.org>  Fri, 04 Sep 2015 00:52:39 +0200
+
+kmix (4:15.08.0-0ubuntu3) wily; urgency=medium
+
+  * Add kubuntu_cmake-policy.diff to fix compilation
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 07 Sep 2015 13:49:30 +0100
+
+kmix (4:15.08.0-0ubuntu2) wily; urgency=medium
+
+  * Add upstream_fix-kmixui.rc-install-location.diff
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 26 Aug 2015 21:06:13 +0100
+
+kmix (4:15.08.0-0ubuntu1) wily; urgency=medium
+
+  * new upstream release
+
+ -- Clive Johnston <clivejo@aol.com>  Wed, 26 Aug 2015 17:31:02 +0100
+
+kmix (4:15.07.90-0ubuntu1) wily; urgency=medium
+
+  * new upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Aug 2015 10:35:30 +0100
+
+kmix (4:15.04.3-1) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * New upstream release (15.04.0).
+  * New upstream release (15.04.2).
+
+  [ Jeremy Lainé ]
+  * New upstream release (15.04.3).
+  * Explicitly build against KDE4.
+  * Add myself to uploaders.
+
+ -- Jeremy Lainé <jeremy.laine@m4x.org>  Fri, 24 Jul 2015 14:10:00 +0200
+
+kmix (4:15.04.2-0ubuntu1) wily; urgency=medium
+
+  [ Scarlett Clark ]
+  * New upstream release
+  * Fix kdelibs version
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 09 Jun 2015 19:10:33 +0200
+
+kmix (4:14.12.3-0ubuntu1) vivid; urgency=medium
+
+  * Add back kdelibs parent version depend
+  * New upstream release
+  * Fix the kdelibs5 version in build depends.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 13 Mar 2015 14:34:06 -0700
+
+kmix (4:14.12.2-1) experimental; urgency=medium
+
+  * Prepare Debian release.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 19 Feb 2015 10:21:37 +0100
+
+kmix (4:14.12.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove unstable from watch file, uscan fails with
+    remote site does not even have current version
+  * Remove kdelibs5-dev depend version as there was not a new release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Feb 2015 09:37:29 -0800
+
+kmix (4:14.11.97-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release candidate
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 02 Dec 2014 21:32:07 -0800
+
+kmix (4:14.11.95-0ubuntu1) vivid; urgency=medium
+
+  * Initial release for KDE applications 14.12 series
+   - Change maintainer to Debian/Kubuntu
+   - Fix Watch file applications locations
+   - Fix VCS for new kde-applications location
+  * Debian merge, remaining changes:
+   - Keep kmix_showeverywhere.diff
+   - Keep kmix.links
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 26 Nov 2014 15:22:39 +0000
+
+kmix (4:4.14.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 10 Oct 2014 05:33:59 -0700
+
+kmix (4:4.14.1-0ubuntu3) utopic; urgency=medium
+
+  * Add restore_kmix_volumes.desktop link from xdg directory
+    LP: #1364432
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Sep 2014 16:11:22 +0200
+
+kmix (4:4.14.1-0ubuntu2) utopic; urgency=medium
+
+  * Add kmix.links with link for autostart files from xdg directory
+    LP: #1364432
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Sep 2014 16:06:06 +0200
+
+kmix (4:4.14.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Mon, 22 Sep 2014 17:21:09 +0200
+
+kmix (4:4.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update build dependencies.
+  * Remove upstream applied patch: kubuntu_script-interpreter.diff
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 20 Aug 2014 19:51:35 +0200
+
+kmix (4:4.14.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 20 Aug 2014 13:13:53 +0200
+
+kmix (4:4.13.97-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release RC
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Fri, 01 Aug 2014 16:55:40 +0200
+
+kmix (4:4.13.95-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Wed, 30 Jul 2014 18:23:11 +0200
+
+kmix (4:4.13.90-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+  * Remove kubuntu_script-interpreter.diff applied upstream
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Thu, 17 Jul 2014 15:27:38 -0700
+
+kmix (4:4.13.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 26 Jul 2014 18:05:14 +0200
+
+kmix (4:4.13.2-0ubuntu1) utopic; urgency=medium
+
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Jun 2014 12:02:30 +0100
+
+kmix (4:4.13.1-1ubuntu1) utopic; urgency=medium
+
+  * Merge with debian, remaining changes :
+    - Keep kmix_showeverywhere.diff
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 16 Jun 2014 20:06:33 +0200
+
+kmix (4:4.13.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * New patch: kubuntu_script-interpreter.diff
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 17 May 2014 19:05:11 +0200
+
+kmix (4:4.13.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream KDE Software Compilation release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Apr 2014 22:07:37 +0100
+
+kmix (4:4.12.97-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Wed, 02 Apr 2014 11:31:35 +0200
+
+kmix (4:4.12.95-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sun, 23 Mar 2014 12:33:34 +0100
+
+kmix (4:4.12.90-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+  * Add kubuntu_script-interpreter.diff from upstream to add
+    interpreter to kmixremote
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 19 Mar 2014 11:03:43 +0000
+
+kmix (4:4.12.3-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 04 Mar 2014 20:53:44 +0100
+
+kmix (4:4.12.2-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:24:58 +0200
+
+kmix (4:4.12.2-1) experimental; urgency=medium
+
+  * Do not disable an empty test set.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * New upstream release.
+  * Bump kde-sc-dev-latest build dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:32:13 +0100
+
+kmix (4:4.12.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 05 Feb 2014 00:06:07 +0000
+
+kmix (4:4.12.1-0ubuntu1) trusty; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 16 Jan 2014 08:22:17 +0000
+
+kmix (4:4.12.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Dec 2013 17:13:54 +0000
+
+kmix (4:4.11.97-0ubuntu1) trusty; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 29 Nov 2013 13:14:36 +0000
+
+kmix (4:4.11.95-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 25 Nov 2013 18:11:59 +0100
+
+kmix (4:4.11.80-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sat, 23 Nov 2013 17:44:04 +0100
+
+kmix (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 08 Nov 2013 12:16:51 +0100
+
+kmix (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 07 Oct 2013 15:00:47 +0200
+
+kmix (4:4.11.2-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 30 Sep 2013 14:30:17 +0100
+
+kmix (4:4.11.1-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 06 Sep 2013 22:26:19 +0100
+
+kmix (4:4.11.0-0ubuntu1) saucy; urgency=low
+
+  [ Howard Chan ]
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 14 Aug 2013 00:20:43 +0100
+
+kmix (4:4.10.97-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC 2 release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Jul 2013 19:40:54 +0100
+
+kmix (4:4.10.95-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 19 Jul 2013 12:32:42 +0000
+
+kmix (4:4.10.90-0ubuntu1) saucy; urgency=low
+
+  * New upstream bet release
+
+ -- Michał Zając <quintasan@kubuntu.org>  Fri, 28 Jun 2013 18:17:48 +0100
+
+kmix (4:4.10.80-0ubuntu1) saucy; urgency=low
+
+  [ Rohan Garg ]
+  * New upstream release
+
+  [ Philip Muškovac ]
+  * Refresh kmix_showeverywhere.diff
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 21 Jun 2013 01:24:49 +0100
+
+kmix (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 11 Jul 2013 17:58:58 +0200
+
+kmix (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump debhelper build-dep and compat to 9.
+  * Bump Standards-Version to 3.9.4.
+  * Update vcs fields.
+  * Add myself to uploaders.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 11:09:50 +0200
+
+kmix (4:4.10.4-0ubuntu1) saucy-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 07 Jun 2013 00:36:39 +0100
+
+kmix (4:4.10.3-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+  * Merge with Debian
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 07 May 2013 16:55:16 +0000
+
+kmix (4:4.10.2-1) experimental; urgency=low
+
+  [ Pino Toscano ]
+  * Initial packaging.
+
+ -- Sune Vuorela <sune@debian.org>  Mon, 08 Apr 2013 19:09:44 +0000
+
+kmix (4:4.10.2-0ubuntu1) raring; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 31 Mar 2013 14:52:04 +0200
+
+kmix (4:4.10.1-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 05 Mar 2013 16:29:12 +0000
+
+kmix (4:4.10.0-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 06 Feb 2013 11:57:58 +0000
+
+kmix (4:4.9.98-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 18 Jan 2013 15:45:15 +0000
+
+kmix (4:4.9.97-0ubuntu1) raring; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 03 Jan 2013 22:38:23 +0100
+
+kmix (4:4.9.95-0ubuntu1) raring; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Dec 2012 23:34:11 +0000
+
+kmix (4:4.9.90-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Dec 2012 17:59:48 +0000
+
+kmix (4:4.9.80-0ubuntu1) raring; urgency=low
+
+  * New upstream beta release
+  * Update kmix.install
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 19 Nov 2012 16:00:11 +0000
+
+kmix (4:4.9.3-0ubuntu1) raring; urgency=low
+
+  * New upstream release (LP: #1074747)
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 06 Nov 2012 22:38:06 +0100
+
+kmix (4:4.9.2-0ubuntu1) quantal; urgency=low
+
+  * New upstream bugfix release
+  * Remove upstream_fix-master-channel-selection.diff now upstream
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 01 Oct 2012 15:21:35 +0100
+
+kmix (4:4.9.1-0ubuntu2) quantal; urgency=low
+
+  * cherry pick upstream commit 0addbb2d9cea4bef7146ccd35527af6113664fd1
+    as upstream_fix-master-channel-selection.diff
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 14 Sep 2012 22:41:19 +0200
+
+kmix (4:4.9.1-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Tue, 04 Sep 2012 15:16:20 +0530
+
+kmix (4:4.9.0-0ubuntu1) quantal; urgency=low
+
+  [ Philip Muškovac ]
+  * Fix the short description of kmix-dev so it says that it's a
+    development package
+
+  [ Jonathan Riddell ]
+  * Use direct build-depends versions rather than kde-sc-dev-latest
+  * New upstream release
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 26 Jul 2012 22:28:01 +0100
+
+kmix (4:4.8.90+repack-0ubuntu1) quantal; urgency=low
+
+  [ Felix Geyer ]
+  * New upstream beta release.
+  * Repack upstream tarball to add a copy of the GPL-2.
+  * Add cmake files to debian/copyright.
+
+  [ Jonathan Riddell ]
+  * Update .install file
+
+ -- Felix Geyer <debfx@ubuntu.com>  Thu, 14 Jun 2012 17:19:54 +0200
+
+kmix (4:4.8.80-0ubuntu1) quantal; urgency=low
+
+  * Initial release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 07 Jun 2012 14:22:19 +0200

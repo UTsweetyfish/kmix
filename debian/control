@@ -1,0 +1,48 @@
+Source: kmix
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+Build-Depends: cmake (>= 3.5~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.68.0~),
+               gettext,
+               libasound2-dev [linux-any],
+               libcanberra-dev,
+               libkf5completion-dev (>= 5.68.0~),
+               libkf5config-dev (>= 5.68.0~),
+               libkf5configwidgets-dev (>= 5.68.0~),
+               libkf5crash-dev (>= 5.68.0~),
+               libkf5dbusaddons-dev (>= 5.68.0~),
+               libkf5doctools-dev (>= 5.68.0~),
+               libkf5globalaccel-dev (>= 5.68.0~),
+               libkf5i18n-dev (>= 5.68.0~),
+               libkf5notifications-dev (>= 5.68.0~),
+               libkf5plasma-dev (>= 5.68.0~),
+               libkf5solid-dev (>= 5.68.0~),
+               libkf5widgetsaddons-dev (>= 5.68.0~),
+               libkf5windowsystem-dev (>= 5.68.0~),
+               libkf5xmlgui-dev (>= 5.68.0~),
+               libpulse-dev (>= 0.9.16),
+               pkg-config,
+               pkg-kde-tools (>= 0.15.16),
+               qtbase5-dev (>= 5.11.0~),
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://apps.kde.org/en/kmix
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kmix
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kmix.git
+
+Package: kmix
+Section: sound
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Provides: x-audio-mixer
+Breaks: ${kde-l10n:all}
+Replaces: ${kde-l10n:all}
+Description: volume control and mixer
+ KMix is an audio device mixer, used to adjust volume, select recording inputs,
+ and set other hardware options.
+ .
+ This package is part of the KDE multimedia module.
